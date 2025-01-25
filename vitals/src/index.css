@@ -1,0 +1,99 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: goldenrod;
+  color: white;
+}
+
+.navbar-links a {
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.dark-mode-btn {
+  background-color: #03dac6;
+  color: black;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.dropdown {
+  margin: 1rem;
+}
+
+.graphs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 1rem; /* Adds consistent spacing between graph containers */
+}
+
+.graphs > div {
+  flex: 1 1 calc(50% - 1rem); /* Each graph takes up 50% width minus gap */
+  margin: 0.5rem;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .navbar {
+  background-color: #3700b3;
+}
+
+.dark-mode .dark-mode-btn {
+  background-color: #bb86fc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links a {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .graphs > div {
+    flex: 1 1 100%; /* Full width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+
+  .navbar-links a {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+
+  .dark-mode-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .graphs {
+    padding: 0.5rem;
+  }
+
+  .graphs > div {
+    margin: 0.25rem 0; /* Reduce margin for smaller screens */
+  }
+}
